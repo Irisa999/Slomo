@@ -10,9 +10,6 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-@Getter
-@Setter
-@ToString
 @RequiredArgsConstructor
 @NoArgsConstructor
 @Table(name = "shop")
@@ -67,6 +64,86 @@ public class Shop extends AbstractAuditingEntity implements Serializable {
     private Integer rating = Integer.valueOf(0);
 
     private Boolean donations = false;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public Boolean getValidated() {
+        return validated;
+    }
+
+    public void setValidated(Boolean validated) {
+        this.validated = validated;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Integer getRating() {
+        return rating;
+    }
+
+    public void setRating(Integer rating) {
+        this.rating = rating;
+    }
+
+    public Boolean getDonations() {
+        return donations;
+    }
+
+    public void setDonations(Boolean donations) {
+        this.donations = donations;
+    }
 
     @Override
     public boolean equals(Object o) {
