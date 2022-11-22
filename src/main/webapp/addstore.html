@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>SLOMO-Add store</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="faviconslomo.png" rel="icon" />
+
+    <!-- template-->
+    <link rel="stylesheet" type="text/css" href="content/css/addstore.css" />
+  </head>
+  <body>
+    <h2>Add store</h2>
+
+    <div class="container">
+      <form action="action_page.php">
+        <label for="fname">Shop name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Shop Name" />
+
+        <label for="lname">Address</label>
+        <input type="text" id="lname" name="lastname" placeholder="Address" />
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="cityname" placeholder="City" />
+
+        <label for="country">Country</label>
+        <input type="text" id="country" name="countryname" placeholder="Country" />
+
+        <label for="postal">Postal Code</label>
+        <input type="int" id="postal" name="postalcode" placeholder="Postal Code" />
+
+        <label for="type">Type</label>
+        <select id="type" name="Type">
+          <option value="vintage">Vintage</option>
+          <option value="thrift">Thrift</option>
+          <option value="secondhand">Secondhand</option>
+        </select>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" placeholder="Write something.." style="height: 200px"></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
