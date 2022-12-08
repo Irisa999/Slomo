@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
  * An authority (a security role) used by Spring Security.
  */
 @Entity
-@Table(name = "user_authority")
+@Table(name = "grant_table")
 public class Authority implements Serializable {
 
     private static final long serialVersionUID = 1L;
