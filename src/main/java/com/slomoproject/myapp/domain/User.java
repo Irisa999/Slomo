@@ -19,7 +19,7 @@ import org.hibernate.annotations.BatchSize;
  * A user.
  */
 @Entity
-@Table(name = "user")
+@Table(name = "user_entity")
 public class User extends AbstractAuditingEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
