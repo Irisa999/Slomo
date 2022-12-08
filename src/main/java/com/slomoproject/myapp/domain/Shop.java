@@ -1,19 +1,19 @@
 package com.slomoproject.myapp.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-import org.hibernate.Hibernate;
-
-import javax.persistence.*;
-import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Objects;
+import javax.persistence.*;
+import javax.validation.constraints.Size;
+import lombok.*;
+import org.hibernate.Hibernate;
 
 @Entity
 @RequiredArgsConstructor
 @NoArgsConstructor
 @Table(name = "shop")
 public class Shop extends AbstractAuditingEntity implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")

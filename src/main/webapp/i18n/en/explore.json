@@ -1,7 +1,7 @@
 {
-  "home": {
-    "title": "Welcome to Slomo!",
-    "subtitle": "This is your homepage",
+  "explore": {
+    "title": "Welcome to Explore!",
+    "subtitle": "This is your city search",
     "logged": {
       "message": "You are logged in as user \"{{username}}\"."
     },
