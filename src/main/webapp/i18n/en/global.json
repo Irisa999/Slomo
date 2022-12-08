@@ -42,7 +42,9 @@
       "confirmpassword.label": "New password confirmation",
       "confirmpassword.placeholder": "Confirm the new password",
       "email.label": "Email",
-      "email.placeholder": "Your email"
+      "email.placeholder": "Your email",
+      "shopname.label": "Shop name",
+      "shopname.placeholder": "Your shop name"
     },
     "messages": {
       "info": {

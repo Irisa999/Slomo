@@ -7,9 +7,9 @@
     "messages": {
       "validate": {
         "login": {
-          "required": "Your username is required.",
-          "minlength": "Your username is required to be at least 1 character.",
-          "maxlength": "Your username cannot be longer than 50 characters.",
+          "required": "Your shop name is required.",
+          "minlength": "Your shop name is required to be at least 1 character.",
+          "maxlength": "Your shop name cannot be longer than 50 characters.",
           "pattern": "Your username is invalid."
         }
       },
