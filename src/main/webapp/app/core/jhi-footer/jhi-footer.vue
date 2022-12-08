@@ -1,6 +1,6 @@
 <template>
   <div id="footer" class="footer">
-    <p v-text="$t('footer')">Dario Scola is amazing</p>
+    <p>© All Rights Reserved to Slomo 2022</p>
   </div>
 </template>
 

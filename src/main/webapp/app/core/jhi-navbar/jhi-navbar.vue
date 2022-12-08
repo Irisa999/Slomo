@@ -2,7 +2,7 @@
   <b-navbar data-cy="navbar" toggleable="md" type="dark" class="bg-primary">
     <b-navbar-brand class="logo" b-link to="/">
       <span class="logo-img"></span>
-      <span v-text="$t('global.title')" class="navbar-title">ProjectSlomo</span> <span class="navbar-version">{{ version }}</span>
+      <span v-text="$t('global.title')" class="navbar-title">ProjectSlomo</span>
     </b-navbar-brand>
     <b-navbar-toggle
       right
@@ -21,9 +21,35 @@
         <b-nav-item to="/" exact>
           <span>
             <font-awesome-icon icon="home" />
-            <span v-text="$t('global.menu.home')">Home</span>
+            <span>Home</span>
           </span>
         </b-nav-item>
+        <b-nav-item to="/explore" exact>
+          <span>
+            <font-awesome-icon icon="explore" />
+            <span>Explore</span>
+          </span>
+        </b-nav-item>
+        <b-nav-item to="/donate" exact>
+          <span>
+            <font-awesome-icon icon="donate" />
+            <span>Donate</span>
+          </span>
+        </b-nav-item>
+        <b-nav-item to="/blog" exact>
+          <span>
+            <font-awesome-icon icon="blog" />
+            <span>Blog</span>
+          </span>
+        </b-nav-item>
+
+        <b-nav-item to="/addstore" exact>
+          <span>
+            <font-awesome-icon icon="addstore" />
+            <span>Add store</span>
+          </span>
+        </b-nav-item>
+
         <b-nav-item-dropdown right id="entity-menu" v-if="authenticated" active-class="active" class="pointer" data-cy="entity">
           <span slot="button-content" class="navbar-dropdown-menu">
             <font-awesome-icon icon="th-list" />
@@ -126,6 +152,8 @@
           </b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
+
+      <!-- Trying to make add a store menu -->
     </b-collapse>
   </b-navbar>
 </template>

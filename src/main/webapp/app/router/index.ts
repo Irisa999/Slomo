@@ -8,6 +8,9 @@ Component.registerHooks([
 import Router, { RouteConfig } from 'vue-router';
 
 const Home = () => import('@/core/home/home.vue');
+const Explore = () => import('@/core/explore/explore.vue');
+// const Donate = () => import('@/core/donate/donate.vue');
+const Addstore = () => import('@/core/addstore/addstore.vue');
 const Error = () => import('@/core/error/error.vue');
 import account from '@/router/account';
 import admin from '@/router/admin';
@@ -24,6 +27,16 @@ const router = new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/explore',
+      name: 'Explore',
+      component: Explore
+    },
+    {
+      path: '/addstore',
+      name: 'Add store',
+      component: Addstore
     },
     {
       path: '/forbidden',

@@ -3,7 +3,7 @@ import { Inject, Prop, Watch, Vue } from 'vue-property-decorator';
 import LoginService from '@/account/login.service';
 
 @Component
-export default class Home extends Vue {
+export default class Explore extends Vue {
   @Inject('loginService')
   private loginService: () => LoginService;
 

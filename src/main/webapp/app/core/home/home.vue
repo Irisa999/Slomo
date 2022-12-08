@@ -1,79 +1,148 @@
 <template>
   <div class="home row">
-    <div class="col-md-3">
-      <span class="hipster img-fluid rounded"></span>
-    </div>
-    <div class="col-md-9">
-      <h1 class="display-4" v-text="$t('home.title')">Welcome, Java Hipster!</h1>
-      <p class="lead" v-text="$t('home.subtitle')">This is your homepage</p>
-
-      <div>
-        <div class="alert alert-success" v-if="authenticated">
-          <span v-if="username" v-text="$t('home.logged.message', { username: username })">You are logged in as user "{{ username }}"</span>
-        </div>
-
-        <div class="alert alert-warning" v-if="!authenticated">
-          <span v-text="$t('global.messages.info.authenticated.prefix')">If you want to </span>
-          <a class="alert-link" v-on:click="openLogin()" v-text="$t('global.messages.info.authenticated.link')">sign in</a
-          ><span v-html="$t('global.messages.info.authenticated.suffix')"
-            >, you can try the default accounts:<br />- Administrator (login="admin" and password="admin") <br />- User (login="user" and
-            password="user").</span
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
-        </div>
-        <div class="alert alert-warning" v-if="!authenticated">
-          <span v-text="$t('global.messages.info.register.noaccount')">You don't have an account yet?</span>&nbsp;
-          <router-link class="alert-link" to="/register" v-text="$t('global.messages.info.register.link')"
-            >Register a new account</router-link
-          >
+            <h1>Slow Movement Fashion</h1>
+            <h2>"As consumers, we have so much power to change the world by just being careful in what we buy."</h2>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+              <a href="./home.vue" class="btn-get-started scrollto">Get Started</a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 home-img" data-aos="zoom-in" data-aos-delay="200">
+            <img src="content/images/home-img.png" class="img-fluid animated" alt="" />
+          </div>
         </div>
       </div>
+    </section>
+    <!-- End Hero -->
 
-      <p v-text="$t('home.question')">If you have any question on JHipster:</p>
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
 
-      <ul>
-        <li>
-          <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" v-text="$t('home.link.homepage')"
-            >JHipster homepage</a
-          >
-        </li>
-        <li>
-          <a
-            href="http://stackoverflow.com/tags/jhipster/info"
-            target="_blank"
-            rel="noopener noreferrer"
-            v-text="$t('home.link.stackoverflow')"
-            >JHipster on Stack Overflow</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/jhipster/generator-jhipster/issues?state=open"
-            target="_blank"
-            rel="noopener noreferrer"
-            v-text="$t('home.link.bugtracker')"
-            >JHipster bug tracker</a
-          >
-        </li>
-        <li>
-          <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" v-text="$t('home.link.chat')"
-            >JHipster public chat room</a
-          >
-        </li>
-        <li>
-          <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer" v-text="$t('home.link.follow')"
-            >follow @jhipster on Twitter</a
-          >
-        </li>
-      </ul>
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              Slomo is a web-based business that works with slow-moving brands and retailers. You may look for the location of any store you
+              choose in the city of your choice. This service aims to increase the number of people who shop in slow-moving stores rather
+              than fast-moving businesses, which benefits the environment in many ways:
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Reduces your carbon footprint & requires less water</li>
+              <li><i class="ri-check-double-line"></i> Saves natural resources & animal lives</li>
+              <li><i class="ri-check-double-line"></i> Supports fairer & safer working conditions</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>Write smth also here!!!</p>
+            <a href="#" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Us Section -->
 
-      <p>
-        <span v-text="$t('home.like')">If you like JHipster, don't forget to give us a star on</span>
-        <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" v-text="$t('home.github')"
-          >GitHub</a
-        >!
-      </p>
-    </div>
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Hey so below are listed the questions.</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"
+                >Question 1? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i
+              ></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>Answer 1.</p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed"
+                >Question 2? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i
+              ></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>Answer 2.</p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed"
+                >Question 3? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i
+              ></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>Answer 3.</p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed"
+                >Question 4? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i
+              ></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>Answer 4.</p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed"
+                >Question 5? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i
+              ></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>Answer 5.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End Frequently Asked Questions Section -->
   </div>
 </template>
 
 <script lang="ts" src="./home.component.ts"></script>
+
+<script>
+export default {
+  data() {
+    return {
+      lat: 0, // Initial latitude
+      lng: 0, // Initial longitude
+      stores: [], // Initial list of stores
+    };
+  },
+  mounted() {
+    // Get the user's current location
+    navigator.geolocation.getCurrentPosition(position => {
+      // Set the user's latitude and longitude
+      this.lat = position.coords.latitude;
+      this.lng = position.coords.longitude;
+
+      // Search for stores near the user's location
+      this.searchStores();
+
+      // Initialize the map
+      this.initMap;
+    });
+  },
+};
+</script>
