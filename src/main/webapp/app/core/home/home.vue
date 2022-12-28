@@ -9,7 +9,7 @@
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <h1>Slow Movement Fashion</h1>
+            <h1>Slow Fashion Movement</h1>
             <h2>"As consumers, we have so much power to change the world by just being careful in what we buy."</h2>
             <div class="d-flex justify-content-center justify-content-lg-start">
               <a href="./home.vue" class="btn-get-started scrollto">Get Started</a>

@@ -9,13 +9,16 @@ import Router, { RouteConfig } from 'vue-router';
 
 const Home = () => import('@/core/home/home.vue');
 const Explore = () => import('@/core/explore/explore.vue');
-// const Donate = () => import('@/core/donate/donate.vue');
-const Addstore = () => import('@/core/addstore/addstore.vue');
+const Blog = () => import('@/core/blog/blog.vue');
+const Donate = () => import('@/core/donate/donate.vue');
+//const AddShop = () => import('@/core/addshop/addshop.vue');
+
 const Error = () => import('@/core/error/error.vue');
 import account from '@/router/account';
 import admin from '@/router/admin';
 import entities from '@/router/entities';
 import pages from '@/router/pages';
+import { Authority } from '@/shared/security/authority';
 
 Vue.use(Router);
 
@@ -34,9 +37,14 @@ const router = new Router({
       component: Explore
     },
     {
-      path: '/addstore',
-      name: 'Add store',
-      component: Addstore
+      path: '/blog',
+      name: 'Blog',
+      component: Blog
+    },{
+      path: '/donate',
+      name: 'Donate',
+      component: Donate,
+      meta: { authorities: [Authority.USER] },
     },
     {
       path: '/forbidden',

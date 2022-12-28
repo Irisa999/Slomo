@@ -1,46 +1,16 @@
-import Component from 'vue-class-component';
-import { Inject, Prop, Watch, Vue } from 'vue-property-decorator';
-import LoginService from '@/account/login.service';
+import axios from 'axios';
 
-@Component
-export default class Explore extends Vue {
-  @Inject('loginService')
-  private loginService: () => LoginService;
+export function getShops(city: string): Promise<Shop[]> {
+  // Make a request to the API to get the list of slow-fashion shops in the given city
+  return axios.get(`/shops?city=${city}`).then(response => response.data);
+}
 
-  // Define the city property as a reactive property
-  @Prop({ default: '' })
-  public city!: string;
+export function filterShops(shops: Shop[], types: string[]): Shop[] {
+  // Filter the list of shops by the given shop types
+  return shops.filter(shop => types.includes(shop.type));
+}
 
-  // Define the stores property as a reactive property
-  @Prop({ default: () => [] })
-  public stores!: string[];
-
-  // Automatically update the showStores computed property when the city or stores properties change
-  @Watch('city')
-  @Watch('stores')
-  public onPropertyChanged() {
-    this.showStores = this.city !== '' && this.stores.length > 0;
-  }
-
-  public openLogin(): void {
-    this.loginService().openLogin((<any>this).$root);
-  }
-
-  public authenticated: boolean = this.$store.getters.authenticated;
-
-  public username: string = this.$store.getters.account?.login ?? '';
-
-  // Define the showStores property as a computed property
-  public get showStores() {
-    return this.city !== '' && this.stores.length > 0;
-  }
-
-  public set showStores(value: boolean) {
-    // ...
-  }
-
-  public searchStores() {
-    // Replace this with a call to a search engine that returns stores in the given city
-    this.stores;
-  }
+interface Shop {
+  name: string;
+  type: string;
 }

@@ -9,6 +9,8 @@ const JhiHealthComponent = () => import('@/admin/health/health.vue');
 const JhiLogsComponent = () => import('@/admin/logs/logs.vue');
 const JhiMetricsComponent = () => import('@/admin/metrics/metrics.vue');
 
+const AddShop = () => import('@/core/addshop/addshop.vue');
+
 export default [
   {
     path: '/admin/user-management',
@@ -62,6 +64,12 @@ export default [
     path: '/admin/configuration',
     name: 'JhiConfigurationComponent',
     component: JhiConfigurationComponent,
+    meta: { authorities: [Authority.ADMIN] },
+  },
+  {
+    path: '/addshop',
+    name: 'Add Shop',
+    component: AddShop,
     meta: { authorities: [Authority.ADMIN] },
   },
 ];

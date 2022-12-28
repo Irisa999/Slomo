@@ -43,8 +43,20 @@
       "confirmpassword.placeholder": "Confirm the new password",
       "email.label": "Email",
       "email.placeholder": "Your email",
-      "shopname.label": "Shop name",
-      "shopname.placeholder": "Your shop name"
+      "name.label": "Shop name",
+      "name.placeholder": "Your shop name",
+      "city.label": "City",
+      "city.placeholder": "City name",
+      "address.label": "Address",
+      "address.placeholder": "Address",
+      "postal_code.label": "Postal Code",
+      "postal_code.placeholder": "Postal Code",
+      "country.label": "Country",
+      "country.placeholder": "Country name",
+      "description.label": "Description",
+      "description.placeholder": "Description name",
+      "category.label": "Category",
+      "category.placeholder": "Category"
     },
     "messages": {
       "info": {

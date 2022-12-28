@@ -1,7 +1,7 @@
 <template>
   <b-navbar data-cy="navbar" toggleable="md" type="dark" class="bg-primary">
     <b-navbar-brand class="logo" b-link to="/">
-      <span class="logo-img"></span>
+      <!-- <span class="logo-img"></span> -->
       <span v-text="$t('global.title')" class="navbar-title">ProjectSlomo</span>
     </b-navbar-brand>
     <b-navbar-toggle
@@ -36,28 +36,37 @@
             <span>Donate</span>
           </span>
         </b-nav-item>
+
+        <!--
         <b-nav-item to="/blog" exact>
           <span>
             <font-awesome-icon icon="blog" />
             <span>Blog</span>
           </span>
         </b-nav-item>
+        -->
 
-        <b-nav-item to="/addstore" exact>
+        <b-nav-item to="/addshop" v-if="hasAnyAuthority('ROLE_ADMIN') && authenticated" exact>
           <span>
-            <font-awesome-icon icon="addstore" />
-            <span>Add store</span>
+            <font-awesome-icon icon="addshop" />
+            <span>Add Shop</span>
           </span>
         </b-nav-item>
 
+        <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here
+        where it says menu and theres a space -->
+
+        <!--
         <b-nav-item-dropdown right id="entity-menu" v-if="authenticated" active-class="active" class="pointer" data-cy="entity">
           <span slot="button-content" class="navbar-dropdown-menu">
             <font-awesome-icon icon="th-list" />
             <span class="no-bold" v-text="$t('global.menu.entities.main')">Entities</span>
           </span>
           <entities-menu></entities-menu>
-          <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
+          here dudeeeeeeeee hereeeeeeeeeeeeeeeeeeee*****************************
         </b-nav-item-dropdown>
+        -->
+
         <b-nav-item-dropdown
           right
           id="admin-menu"
