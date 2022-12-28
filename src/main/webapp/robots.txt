@@ -8,3 +8,6 @@ Disallow: /api/logs/
 Disallow: /api/users/
 Disallow: /management/
 Disallow: /v3/api-docs/
+Disallow: /shop
+Disallow: /api/explore
+Disallow: /api/donate

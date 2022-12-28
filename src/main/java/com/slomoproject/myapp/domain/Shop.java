@@ -34,6 +34,12 @@ public class Shop extends AbstractAuditingEntity implements Serializable {
 
     @Size(max = 15)
     @NonNull
+    @JsonProperty("country")
+    @Column(length = 15)
+    private String country;
+
+    @Size(max = 15)
+    @NonNull
     @JsonProperty("city")
     @Column(length = 15)
     private String city;
@@ -95,6 +101,14 @@ public class Shop extends AbstractAuditingEntity implements Serializable {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public String getAddress() {

@@ -27,6 +27,7 @@ import AlertService from './shared/alert/alert.service';
 import '../content/scss/global.scss';
 import '../content/scss/vendor.scss';
 import TranslationService from '@/locale/translation.service';
+import ShopService from '@/core/addshop/addshop.service';
 /* tslint:disable */
 
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
@@ -77,6 +78,7 @@ const vue = new Vue({
     loginService: () => loginService,
     activateService: () => new ActivateService(),
     registerService: () => new RegisterService(),
+    shopService: () => new ShopService(),
     userManagementService: () => new UserManagementService(),
     healthService: () => new HealthService(),
     configurationService: () => new ConfigurationService(),
